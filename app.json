@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "youhui",
-    "slug": "youhui",
+    "name": "x-activity-client",
+    "slug": "x-activity-client",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -26,6 +26,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": ""
+    "description": "收集/分享 各种领红包/组队 活动",
+    "githubUrl": "https://github.com/yuanjingtech/x-activity-client"
   }
 }
