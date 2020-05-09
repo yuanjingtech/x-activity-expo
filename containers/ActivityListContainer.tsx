@@ -1,11 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {FlatList} from "react-native";
-import {activities} from "../data";
 import Activity from "../components/Activity";
-
+import {activityService,IActivity} from "../services"
 
 const ActivityListContainer = () => {
-    const [tasks] = useState(activities);
+    const [tasks,setTasks] = useState<IActivity[]>([]);
+    useEffect(()=>{
+        const run=async()=>{
+            const list = await activityService.getList();
+            setTasks(list);
+        }
+        run();
+    })
     return (
         <FlatList
             data={tasks}
